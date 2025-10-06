@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Swal from 'sweetalert2';
+
 
 const Indian = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/afghan")
+        fetch("http://localhost:3000/indian")
             .then((res) => res.json())
             .then((data) => { setOrders(data.slice(1)) })
             .catch((err) => console.error(err));
@@ -22,7 +24,7 @@ const Indian = () => {
             console.log(updated)
 
             // send update to backend
-            const res = await fetch(`http://localhost:3000/afghan/${id}`, {
+            const res = await fetch(`http://localhost:3000/indian/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ [field]: value }),
@@ -60,7 +62,7 @@ const Indian = () => {
     return (
         <div className="overflow-x-auto p-6">
             <h2 className="text-3xl font-semibold mb-6 text-center text-primary">
-                Afghan Menu Orders
+                Indian Menu Orders
             </h2>
             <div className="bg-base-100  rounded-2xl p-4">
                 <table className="table table-zebra w-full">
@@ -85,12 +87,9 @@ const Indian = () => {
                         {orders.map((order, index) => {
                             // Compute the number of people based on menu type
                             let peopleCount = 0;
-                            if (order.radio_2 === "Afghansk Supreme") peopleCount = order.number_1 || 0;
-                            else if (order.radio_2 === "Afghansk Deluxe") peopleCount = order.number_2 || 0;
-                            else if (order.radio_2 === "Afghansk Familie") peopleCount = order.number_3 || 0;
-                            else if (order.radio_2 === "Afghansk Favorit") peopleCount = order.number_4 || 0;
-                            else if (order.radio_2 === "Afghansk Klassiker") peopleCount = order.number_5 || 0;
-
+                            if (order.radio_2 === "Indisk Deluxe") peopleCount = order.number_3 || 0;
+                            else if (order.radio_2 === "Indisk Favorit") peopleCount = order.number_4 || 0;
+                            else if (order.radio_2 === "Indisk Classic") peopleCount = order.number_5 || 0;
                             return (
                                 <tr
                                     key={order._id}
