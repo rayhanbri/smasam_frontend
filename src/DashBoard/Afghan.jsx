@@ -64,7 +64,7 @@ const Afghan = () => {
                 Afghan Menu Orders
             </h2>
             <div className="bg-base-100  rounded-2xl p-4">
-                <table className="table table-zebra w-full">
+                <table className="table  w-full">
                     <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10">
                         <tr >
                             <th>#</th>
@@ -94,8 +94,8 @@ const Afghan = () => {
 
                             return (
                                 <tr
-                                    key={order._id}
-                                    className={`hover ${order.lastUpdate === "Delivered" ? "bg-green-100"
+                                    key={order._id+Math.random(1000)}
+                                    className={` ${order.lastUpdate === "Delivered" ? "bg-green-100"
                                         :
                                         order.orderStatus === "Confirm"
                                             ? "bg-yellow-100"

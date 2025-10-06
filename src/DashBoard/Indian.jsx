@@ -65,7 +65,7 @@ const Indian = () => {
                 Indian Menu Orders
             </h2>
             <div className="bg-base-100  rounded-2xl p-4">
-                <table className="table table-zebra w-full">
+                <table className="table  w-full">
                     <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10">
                         <tr >
                             <th>#</th>
@@ -93,7 +93,7 @@ const Indian = () => {
                             return (
                                 <tr
                                     key={order._id}
-                                    className={`hover ${order.lastUpdate === "Delivered" ? "bg-green-100"
+                                    className={`hover ${order.lastUpdate ==="Delivered" ? "bg-green-100"
                                         :
                                         order.orderStatus === "Confirm"
                                             ? "bg-yellow-100"
