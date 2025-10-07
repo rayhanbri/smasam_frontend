@@ -116,9 +116,10 @@ const TakeAway = () => {
                             <th>checkbox_11</th>
                             <th>select_48</th>
                             <th>radio_4</th>
-                            <th>page_id</th>
                             <th>calculation_1</th>
                             <th>entry_time</th>
+                            <th>radio_5</th>
+                            <th>calculation_3</th>
                             <th>Order Status</th>
                             <th>Last Update</th>
                         </tr>
@@ -182,9 +183,10 @@ const TakeAway = () => {
                                     <td>{order.checkbox_11}</td>
                                     <td>{order.select_48}</td>
                                     <td>{order.radio_4}</td>
-                                    <td>{order.page_id}</td>
                                     <td>{order.calculation_1}</td>
                                     <td>{order.entry_time}</td>
+                                    <td>{order.radio_5}</td>
+                                    <td>{order.calculation_3}</td>
 
                                     {/* Order Status Dropdown */}
                                     <td>
