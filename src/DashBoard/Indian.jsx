@@ -85,6 +85,7 @@ const Indian = () => {
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
                             <th>Indtastningstid</th>
+                            <th>Levering/Afhentning</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -145,6 +146,7 @@ const Indian = () => {
                                         </select>
                                     </td>
                                     <td>{order.entry_time}</td>
+                                    <td>{order.radio_5}</td>
                                 </tr>
                             );
                         })}

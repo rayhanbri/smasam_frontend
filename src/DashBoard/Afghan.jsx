@@ -78,11 +78,10 @@ const Afghan = () => {
                             <th>People</th>
                             <th>PickUP Time</th>
                             <th>Amount</th>
-
-
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
                             <th>Indtastningstid</th>
+                            <th>Levering/Afhentning</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -146,6 +145,7 @@ const Afghan = () => {
                                         </select>
                                     </td>
                                     <td>{order.entry_time}</td>
+                                    <td>{order.radio_5}</td>
                                 </tr>
                             );
                         })}
