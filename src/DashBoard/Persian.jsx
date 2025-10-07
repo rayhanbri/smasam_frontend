@@ -65,25 +65,21 @@ const Persian = () => {
                 Persian Menu Orders
             </h2>
             <div className="bg-base-100  rounded-2xl p-4">
-                <table className="table  w-full">
+                <table className="table w-full    min-w-full border-collaps">
                     <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10">
                         <tr >
                             <th>#</th>
                             <th>Ordre Nr.</th>
                             <th>Indtastningstid</th>
                             <th>Navn</th>
-
-
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Levering/Afhentning</th>
-                            <th>Payment</th>
-                            <th>PickUP Time</th>
-                            <th>Menu</th>
-                            <th>People</th>
-                            <th>Amount</th>
-
-
+                            <th>Telefonnummer</th>
+                            <th>E-mailadresse</th>
+                             <th>Levering/Afhentning</th>
+                            <th>Betalingsmetode</th>
+                            <th>afhentningstidspunkt</th>
+                            <th>Menukort</th>
+                            <th>Person</th>
+                            <th>Total</th>
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
                             

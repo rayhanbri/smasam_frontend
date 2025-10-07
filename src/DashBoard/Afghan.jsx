@@ -64,27 +64,23 @@ const Afghan = () => {
                 Afghan Menu Orders
             </h2>
             <div className="bg-base-100  rounded-2xl p-4">
-                <table className="table  w-full">
-                    <thead className="bg-base-200 text-base font-semibold  ">
+                <table className="table  w-full min-w-full border-collaps ">
+                    <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10  ">
                         <tr>
                             <th>#</th>
                             <th>Ordre Nr.</th>
-                             <th>Indtastningstid</th>
+                            <th>Indtastningstid</th>
                             <th>Navn</th>
-
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Payment</th>
-                            <th>PickUP Time</th>
-                            <th>Menu</th>
-                            <th>People</th>
-                            <th>Amount</th>
-
-
+                            <th>Telefonnummer</th>
+                            <th>E-mailadresse</th>
+                             <th>Levering/Afhentning</th>
+                            <th>Betalingsmetode</th>
+                            <th>afhentningstidspunkt</th>
+                            <th>Menukort</th>
+                            <th>Person</th>
+                            <th>Total</th>
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
-                            
-                            <th>Levering/Afhentning</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -109,10 +105,11 @@ const Afghan = () => {
                                     <td>{index + 1}</td>
                                     <td className="font-medium">{order.orderNumber}</td>
                                     <td>{order.entry_time}</td>
+                                    
                                     <td>{order.name_2} {order.name_3}</td>
                                     <td>{order.phone_1}</td>
                                     <td>{order.email_1}</td>
-                                    
+                                     <td>{order.radio_5}</td>
                                     <td>{order.radio_3}</td>
                                     <td>{order.radio_4}</td>
                                     <td>{order.radio_2}</td>
@@ -150,7 +147,6 @@ const Afghan = () => {
                                         </select>
                                     </td>
                                     
-                                    <td>{order.radio_5}</td>
                                 </tr>
                             );
                         })}

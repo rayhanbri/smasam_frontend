@@ -70,22 +70,20 @@ const Indian = () => {
                         <tr >
                             <th>#</th>
                             <th>Ordre Nr.</th>
+                            <th>Indtastningstid</th>
                             <th>Navn</th>
-
-
-                            <th>Phone</th>
-                            <th>Email</th>
-                            <th>Menu</th>
-                            <th>Payment</th>
-                            <th>People</th>
-                            <th>PickUP Time</th>
-                            <th>Amount</th>
-
-
+                            <th>Telefonnummer</th>
+                            <th>E-mailadresse</th>
+                             <th>Levering/Afhentning</th>
+                            <th>Betalingsmetode</th>
+                            <th>afhentningstidspunkt</th>
+                            <th>Menukort</th>
+                            <th>Person</th>
+                            <th>Total</th>
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
-                            <th>Indtastningstid</th>
-                            <th>Levering/Afhentning</th>
+                            
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -106,13 +104,15 @@ const Indian = () => {
                                 >
                                     <td>{index + 1}</td>
                                     <td className="font-medium">{order.orderNumber}</td>
+                                     <td>{order.entry_time}</td>
                                     <td>{order.name_2} {order.name_3}</td>
                                     <td>{order.phone_1}</td>
                                     <td>{order.email_1}</td>
-                                    <td>{order.radio_2}</td>
+                                    <td>{order.radio_5}</td>
                                     <td>{order.radio_3}</td>
-                                    <td>{peopleCount}</td> {/* safer & clean */}
                                     <td>{order.radio_4}</td>
+                                    <td>{order.radio_2}</td>
+                                    <td>{peopleCount}</td> 
                                     <td>{order.calculation_1}</td>
 
                                     {/* Order Status Dropdown */}
@@ -145,8 +145,8 @@ const Indian = () => {
                                             <option value="Delivered">Delivered</option>
                                         </select>
                                     </td>
-                                    <td>{order.entry_time}</td>
-                                    <td>{order.radio_5}</td>
+                                   
+                                   
                                 </tr>
                             );
                         })}
