@@ -69,11 +69,13 @@ const Lunch = () => {
                     <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10">
                         <tr >
                             <th>#</th>
-                            <th>Order No.</th>
-                            <th>name_2</th>
+                            <th>Ordre Nr.</th>
+                            <th>Navn</th>
+
+
+
                             <th>phone_1</th>
                             <th>email_1</th>
-
                             <th>radio_3</th>
                             <th>select_1</th>
                             <th>select_2</th>
@@ -85,9 +87,10 @@ const Lunch = () => {
                             <th>radio_4</th>
                             <th>calculation_1</th>
 
-                            <th>orderStatus</th>
-                            <th>lastUpdate</th>
-                            <th>entry_time</th>
+
+                            <th>Ordrestatus</th>
+                            <th>Sidste opdatering</th>
+                            <th>Indtastningstid</th>
                         </tr>
                     </thead>
                     <tbody>

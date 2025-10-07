@@ -68,8 +68,9 @@ const Afghan = () => {
                     <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10">
                         <tr >
                             <th>#</th>
-                            <th>Order No.</th>
-                            <th>Name</th>
+                            <th>Ordre Nr.</th>
+                            <th>Navn</th>
+
                             <th>Phone</th>
                             <th>Email</th>
                             <th>Menu</th>
@@ -77,9 +78,11 @@ const Afghan = () => {
                             <th>People</th>
                             <th>PickUP Time</th>
                             <th>Amount</th>
-                            <th>Order Status</th>
-                            <th>Last Update</th>
-                            <th>Time</th>
+
+
+                            <th>Ordrestatus</th>
+                            <th>Sidste opdatering</th>
+                            <th>Indtastningstid</th>
                         </tr>
                     </thead>
                     <tbody>

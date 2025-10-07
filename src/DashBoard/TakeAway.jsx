@@ -69,8 +69,10 @@ const TakeAway = () => {
                     <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10">
                         <tr >
                             <th>#</th>
-                            <th>Order No.</th>
-                            <th>name_2</th>
+                            <th>Ordre Nr.</th>
+                            <th>Navn</th>
+
+{/* start from here  */}
                             <th>phone_1</th>
                             <th>email_1</th>
                             <th>radio_3</th>
@@ -117,11 +119,12 @@ const TakeAway = () => {
                             <th>select_48</th>
                             <th>radio_4</th>
                             <th>calculation_1</th>
-                            <th>entry_time</th>
                             <th>radio_5</th>
                             <th>calculation_3</th>
-                            <th>Order Status</th>
-                            <th>Last Update</th>
+
+                           <th>Ordrestatus</th>
+                            <th>Sidste opdatering</th>
+                            <th>Indtastningstid</th>
                         </tr>
                     </thead>
                     <tbody>
