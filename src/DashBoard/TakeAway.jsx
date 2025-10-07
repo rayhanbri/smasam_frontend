@@ -72,7 +72,7 @@ const TakeAway = () => {
                             <th>Ordre Nr.</th>
                             <th>Navn</th>
 
-{/* start from here  */}
+
                             <th>phone_1</th>
                             <th>email_1</th>
                             <th>radio_3</th>
@@ -121,7 +121,7 @@ const TakeAway = () => {
                             <th>calculation_1</th>
                             <th>radio_5</th>
                             <th>calculation_3</th>
-
+{/* test  */}
                            <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
                             <th>Indtastningstid</th>
