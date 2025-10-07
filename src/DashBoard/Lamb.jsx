@@ -62,7 +62,7 @@ const Lamb = () => {
     return (
         <div className="overflow-x-auto p-6">
             <h2 className="text-3xl font-semibold mb-6 text-center text-primary">
-                Indian Menu Orders
+                Roasted Lamb Menu Orders
             </h2>
             <div className="bg-base-100  rounded-2xl p-4">
                 <table className="table  w-full">
