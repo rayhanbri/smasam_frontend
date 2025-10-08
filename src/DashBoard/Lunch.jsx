@@ -70,27 +70,28 @@ const Lunch = () => {
                         <tr >
                             <th>#</th>
                             <th>Ordre Nr.</th>
+                             <th>Indtastningstid</th>
                             <th>Navn</th>
 
 
 
-                            <th>phone_1</th>
-                            <th>email_1</th>
-                            <th>radio_3</th>
-                            <th>select_1</th>
-                            <th>select_2</th>
-                            <th>select_3</th>
-                            <th>select_4</th>
-                            <th>select_5</th>
-                            <th>select_6</th>
-                            <th>select_7</th>
-                            <th>radio_4</th>
-                            <th>calculation_1</th>
+                            <th>Telefonnummer</th>
+                            <th>E-mailadresse</th>
+                            <th>Betalingsmetode</th>
+                            <th>afhentningstidspunkt</th>
+                            <th>Smør Kylling</th>
+                            <th>Kylling Kavarma</th>
+                            <th>Kylling Biryani</th>
+                            <th>Cardigan</th>
+                            <th>Chapli Kabab</th>
+                            <th>Auberginefad (vegetarisk)</th>
+                            <th>Chicken Tikka</th>
+                            <th>Total</th>
 
 
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
-                            <th>Indtastningstid</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
@@ -106,11 +107,13 @@ const Lunch = () => {
                                 >
                                     <td>{index + 1}</td>
                                     <td className="font-medium">{order.orderNumber}</td>
+                                    <td>{order.entry_time}</td>
                                     <td>{order.name_2} {order.name_3}</td>
                                     <td>{order.phone_1}</td>
                                     <td>{order.email_1}</td>
                                     {/* ----- */}
                                     <td>{order.radio_3}</td>
+                                    <td>{order.radio_4}</td>
                                     <td>{order.select_1}</td>
                                     <td>{order.select_2}</td>
                                     <td>{order.select_3}</td>
@@ -118,7 +121,6 @@ const Lunch = () => {
                                     <td>{order.select_5}</td>
                                     <td>{order.select_6}</td>
                                     <td>{order.select_7}</td>
-                                    <td>{order.radio_4}</td>
                                     <td>{order.calculation_1}</td>
 
                                     {/* Order Status Dropdown */}
@@ -151,7 +153,7 @@ const Lunch = () => {
                                             <option value="Delivered">Delivered</option>
                                         </select>
                                     </td>
-                                    <td>{order.entry_time}</td>
+                                    
                                 </tr>
                             );
                         })}
