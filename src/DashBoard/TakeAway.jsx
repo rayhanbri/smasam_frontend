@@ -74,53 +74,55 @@ const TakeAway = () => {
                             <th>Navn</th>
                             <th>Telefonnummer</th>
                             <th>E-mailadresse</th>
-
-                            <th>Betalingsmetode</th>
-                            <th>select_1</th>
-                            <th>select_2</th>
-                            <th>select_3</th>
-                            <th>select_4</th>
-                            <th>select_5</th>
-                            <th>select_6</th>
-                            <th>select_7</th>
-                            <th>select_10</th>
-                            <th>select_11</th>
-                            <th>select_12</th>
-                            <th>select_25</th>
-                            <th>select_24</th>
-                            <th>select_13</th>
-                            <th>select_22</th>
-                            <th>select_21</th>
-                            <th>select_20</th>
-                            <th>select_23</th>
-                            <th>select_19</th>
-                            <th>select_16</th>
-                            <th>select_17</th>
-                            <th>select_18</th>
-                            <th>select_14</th>
-                            <th>select_15</th>
-                            <th>select_26</th>
-                            <th>select_28</th>
-                            <th>select_27</th>
-                            <th>select_30</th>
-                            <th>select_31</th>
-                            <th>select_32</th>
-                            <th>select_33</th>
-                            <th>select_34</th>
-                            <th>select_36</th>
-                            <th>select_35</th>
-                            <th>select_37</th>
-                            <th>select_38</th>
-                            <th>select_39</th>
-                            <th>select_40</th>
-                            <th>select_41</th>
-                            <th>select_42</th>
-                            <th>checkbox_11</th>
-                            <th>select_48</th>
-                            <th>afhentningstidspunkt</th>
-                            <th>calculation_1</th>
                             <th>Levering/Afhentning</th>
-                            <th>calculation_3</th>
+                            <th>Betalingsmetode</th>
+                            <th>afhentningstidspunkt</th>
+
+                            <th>Burger menu</th>
+                            <th>Kyllingeburger</th>
+                            <th>Fiskefilet menu</th>
+                            <th>Coca-Cola</th>
+                            <th>Pepsi Max</th>
+                            <th>Faxekondi</th>
+                            <th>Fanta</th>
+                            <th>Sambusa Vegetar</th>
+                            <th>Sambusa Oksekød</th>
+                            <th>Kabuli Pulao</th>
+                            <th>Butter Kylling</th>
+                            <th>Kylling Tikka Masala</th>
+                            <th>Qorma</th>
+                            <th>Ghormeh Sabzi</th>
+                            <th>Cardigan Salan</th>
+                            <th>Palak Paneer (V)</th>
+                            <th>Vegetarisk ret (V)</th>
+                            <th>Mantu-fad</th>
+                            <th>Kylling</th>
+                            <th>Biryani (V)</th>
+                            <th>Kylling Biryani</th>
+                            <th>Kalv Biryani</th>
+                            <th>Lam Biryani</th>
+                            <th>Normal</th>
+                            <th>Zereshk Polo</th>
+                            <th>Polo shirt</th>
+                            <th>Burger</th>
+                            <th>Kyllingeburger</th>
+                            <th>Fiskefilet</th>
+                            <th>Nuggets</th>
+                            <th>Hvidløgsnaan (V)</th>
+                            <th>Salat (V)</th>
+                            <th>Hvide ris</th>
+                            <th>Chutney</th>
+                            <th>Tzatziki</th>
+                            <th>Raita</th>
+                            <th>Ketchup</th>
+                            <th>Mayonnaise</th>
+                            <th>Remoulade</th>
+                            <th>Engangs service</th>
+                            <th>Vand</th>
+
+
+
+                            <th>Total</th>
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
 
@@ -128,6 +130,11 @@ const TakeAway = () => {
                     </thead>
                     <tbody>
                         {orders.map((order, index) => {
+
+                            let Total = 0;
+                            if (order.radio_5 === "Afhentning") Total = order.calculation_2 || 0;
+                            else if (order.radio_5 === "Levering") Total = order.calculation_1 || 0;
+
                             return (
                                 <tr
                                     key={order._id}
@@ -139,11 +146,13 @@ const TakeAway = () => {
                                 >
                                     <td>{index + 1}</td>
                                     <td className="font-medium">{order.orderNumber}</td>
-                                     <td>{order.entry_time}</td>
+                                    <td>{order.entry_time}</td>
                                     <td>{order.name_2} {order.name_3}</td>
                                     <td>{order.phone_1}</td>
                                     <td>{order.email_1}</td>
+                                    <td>{order.radio_5}</td>
                                     <td>{order.radio_3}</td>
+                                    <td>{order.radio_4}</td>
                                     <td>{order.select_1}</td>
                                     <td>{order.select_2}</td>
                                     <td>{order.select_3}</td>
@@ -185,10 +194,7 @@ const TakeAway = () => {
                                     <td>{order.select_42}</td>
                                     <td>{order.checkbox_11}</td>
                                     <td>{order.select_48}</td>
-                                    <td>{order.radio_4}</td>
-                                    <td>{order.calculation_1}</td>
-                                    <td>{order.radio_5}</td>
-                                    <td>{order.calculation_3}</td>
+                                    <td>{Total}</td>
 
                                     {/* Order Status Dropdown */}
                                     <td>
@@ -221,7 +227,7 @@ const TakeAway = () => {
                                         </select>
                                     </td>
 
-                                   
+
                                 </tr>
                             );
                         })}
