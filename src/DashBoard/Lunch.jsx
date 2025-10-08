@@ -72,13 +72,9 @@ const Lunch = () => {
                             <th>Ordre Nr.</th>
                              <th>Indtastningstid</th>
                             <th>Navn</th>
-
-
-
                             <th>Telefonnummer</th>
                             <th>E-mailadresse</th>
-                            <th>Betalingsmetode</th>
-                            <th>afhentningstidspunkt</th>
+                            
                             <th>Smør Kylling</th>
                             <th>Kylling Kavarma</th>
                             <th>Kylling Biryani</th>
@@ -86,6 +82,9 @@ const Lunch = () => {
                             <th>Chapli Kabab</th>
                             <th>Auberginefad (vegetarisk)</th>
                             <th>Chicken Tikka</th>
+                            <th>Levering/Afhentning</th>
+                            <th>Betalingsmetode</th>
+                            <th>afhentningstidspunkt</th>
                             <th>Total</th>
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
@@ -109,8 +108,6 @@ const Lunch = () => {
                                     <td>{order.phone_1}</td>
                                     <td>{order.email_1}</td>
                                     {/* ----- */}
-                                    <td>{order.radio_3}</td>
-                                    <td>{order.radio_4}</td>
                                     <td>{order.select_1}</td>
                                     <td>{order.select_2}</td>
                                     <td>{order.select_3}</td>
@@ -118,6 +115,9 @@ const Lunch = () => {
                                     <td>{order.select_5}</td>
                                     <td>{order.select_6}</td>
                                     <td>{order.select_7}</td>
+                                    <td>{order.radio_5}</td>
+                                     <td>{order.radio_3}</td>
+                                    <td>{order.radio_4}</td>
                                     <td>{order.calculation_1}</td>
 
                                     {/* Order Status Dropdown */}
