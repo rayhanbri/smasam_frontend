@@ -74,9 +74,7 @@ const TakeAway = () => {
                             <th>Navn</th>
                             <th>Telefonnummer</th>
                             <th>E-mailadresse</th>
-                            <th>Levering/Afhentning</th>
-                            <th>Betalingsmetode</th>
-                            <th>afhentningstidspunkt</th>
+                           
 
                             <th>Burger menu</th>
                             <th>Kyllingeburger</th>
@@ -121,7 +119,9 @@ const TakeAway = () => {
                             <th>Vand</th>
 
 
-
+                            <th>Levering/Afhentning</th>
+                            <th>Betalingsmetode</th>
+                            <th>afhentningstidspunkt</th>
                             <th>Total</th>
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
@@ -150,9 +150,7 @@ const TakeAway = () => {
                                     <td>{order.name_2} {order.name_3}</td>
                                     <td>{order.phone_1}</td>
                                     <td>{order.email_1}</td>
-                                    <td>{order.radio_5}</td>
-                                    <td>{order.radio_3}</td>
-                                    <td>{order.radio_4}</td>
+                                    
                                     <td>{order.select_1}</td>
                                     <td>{order.select_2}</td>
                                     <td>{order.select_3}</td>
@@ -194,6 +192,9 @@ const TakeAway = () => {
                                     <td>{order.select_42}</td>
                                     <td>{order.checkbox_11}</td>
                                     <td>{order.select_48}</td>
+                                    <td>{order.radio_5}</td>
+                                    <td>{order.radio_3}</td>
+                                    <td>{order.radio_4}</td>
                                     <td>{Total}</td>
 
                                     {/* Order Status Dropdown */}
