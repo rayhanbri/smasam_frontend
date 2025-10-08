@@ -12,7 +12,7 @@ import Indian from './DashBoard/Indian.jsx';
 import Lamb from './DashBoard/Lamb.jsx';
 import TakeAway from './DashBoard/TakeAway.jsx';
 import Lunch from './DashBoard/Lunch.jsx';
-import Contact from './DashBoard/contact.jsx';
+import Contact from './DashBoard/Contact.jsx';
 
 
 const router = createBrowserRouter([
