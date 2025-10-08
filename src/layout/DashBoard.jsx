@@ -4,7 +4,7 @@ import { Link, Outlet } from 'react-router';
 
 const dashBoard = () => {
     return (
-        <div className='md:w-7xl md:mx-auto md:mt-5'>
+        <div className=' md:mt-5'>
             <Navbar></Navbar>
             {/* dash Board layout  */}
             <div className="drawer lg:drawer-open">

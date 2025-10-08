@@ -70,12 +70,12 @@ const TakeAway = () => {
                         <tr >
                             <th>#</th>
                             <th>Ordre Nr.</th>
+                            <th>Indtastningstid</th>
                             <th>Navn</th>
+                            <th>Telefonnummer</th>
+                            <th>E-mailadresse</th>
 
-
-                            <th>phone_1</th>
-                            <th>email_1</th>
-                            <th>radio_3</th>
+                            <th>Betalingsmetode</th>
                             <th>select_1</th>
                             <th>select_2</th>
                             <th>select_3</th>
@@ -117,14 +117,13 @@ const TakeAway = () => {
                             <th>select_42</th>
                             <th>checkbox_11</th>
                             <th>select_48</th>
-                            <th>radio_4</th>
+                            <th>afhentningstidspunkt</th>
                             <th>calculation_1</th>
-                            <th>radio_5</th>
+                            <th>Levering/Afhentning</th>
                             <th>calculation_3</th>
-{/* test  */}
-                           <th>Ordrestatus</th>
+                            <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
-                            <th>Indtastningstid</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -140,6 +139,7 @@ const TakeAway = () => {
                                 >
                                     <td>{index + 1}</td>
                                     <td className="font-medium">{order.orderNumber}</td>
+                                     <td>{order.entry_time}</td>
                                     <td>{order.name_2} {order.name_3}</td>
                                     <td>{order.phone_1}</td>
                                     <td>{order.email_1}</td>
@@ -187,7 +187,6 @@ const TakeAway = () => {
                                     <td>{order.select_48}</td>
                                     <td>{order.radio_4}</td>
                                     <td>{order.calculation_1}</td>
-                                    <td>{order.entry_time}</td>
                                     <td>{order.radio_5}</td>
                                     <td>{order.calculation_3}</td>
 
@@ -221,6 +220,8 @@ const TakeAway = () => {
                                             <option value="Delivered">Delivered</option>
                                         </select>
                                     </td>
+
+                                   
                                 </tr>
                             );
                         })}
