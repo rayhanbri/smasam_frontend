@@ -87,11 +87,8 @@ const Lunch = () => {
                             <th>Auberginefad (vegetarisk)</th>
                             <th>Chicken Tikka</th>
                             <th>Total</th>
-
-
                             <th>Ordrestatus</th>
                             <th>Sidste opdatering</th>
-                           
                         </tr>
                     </thead>
                     <tbody>
