@@ -6,7 +6,7 @@ const Lunch = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/lunch")
+        fetch("https://smasam-backend.vercel.app/lunch")
             .then((res) => res.json())
             .then((data) => { setOrders(data.slice(1)) })
             .catch((err) => console.error(err));
@@ -24,7 +24,7 @@ const Lunch = () => {
             console.log(updated)
 
             // send update to backend
-            const res = await fetch(`http://localhost:3000/lunch/${id}`, {
+            const res = await fetch(`https://smasam-backend.vercel.app/lunch/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ [field]: value }),

@@ -6,7 +6,7 @@ const Lamb = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/lamb")
+        fetch("https://smasam-backend.vercel.app/lamb")
             .then((res) => res.json())
             .then((data) => { setOrders(data.slice(1)) })
             .catch((err) => console.error(err));
@@ -24,7 +24,7 @@ const Lamb = () => {
             console.log(updated)
 
             // send update to backend
-            const res = await fetch(`http://localhost:3000/lamb/${id}`, {
+            const res = await fetch(`https://smasam-backend.vercel.app/lamb/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ [field]: value }),

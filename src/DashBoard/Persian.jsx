@@ -6,7 +6,7 @@ const Persian = () => {
     const [orders, setOrders] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/persian")
+        fetch("https://smasam-backend.vercel.app/persian")
             .then((res) => res.json())
             .then((data) => { setOrders(data) })
             .catch((err) => console.error(err));
@@ -24,7 +24,7 @@ const Persian = () => {
             console.log(updated)
 
             // send update to backend
-            const res = await fetch(`http://localhost:3000/persian/${id}`, {
+            const res = await fetch(`https://smasam-backend.vercel.app/persian/${id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ [field]: value }),
