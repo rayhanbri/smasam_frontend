@@ -1,6 +1,8 @@
 import React from 'react';
 import Navbar from '../Root/Navbar';
 import { Link, Outlet } from 'react-router';
+import { GiChickenLeg, GiChickenOven, GiHotMeal, GiKebabSpit, GiTakeMyMoney } from 'react-icons/gi';
+import { MdContactMail, MdLunchDining } from 'react-icons/md';
 
 const dashBoard = () => {
     return (
@@ -33,21 +35,45 @@ const dashBoard = () => {
                     </div>
                     {/* Page content here */}
                     <Outlet></Outlet>
+
                     {/* Page content here */}
 
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                    <ul className="menu   min-h-full w-80 p-4 sticky top-0 h-screen border-2 bg-[#23422A] text-white shadow-lg rounded-xl">
                         {/* Sidebar content here */}
-                        <li><Link to='/dashBoard'>Afghan Menu</Link></li>
-                        <li><Link to='persian'>Persian Menu</Link></li>
-                        <li><Link to='indian'>Indian Menu</Link></li>
-                        <li><Link to='lamb'>Rosted Lamb</Link></li>
-                        <li><Link to='lunch'>Lunch Menu</Link></li>
-                        <li><Link to='takeAway'>Take Away Menu</Link></li>
-                        <li><Link to='contact'>Contact Form</Link></li>
-                        
+                            <li className=' font-light  mt-10'>
+                        <Link to='/dashBoard'>
+                                <GiKebabSpit className="text-lg text-white" />
+                                Afghan Menu
+                        </Link>
+                            </li>
+                        <li><Link to='persian'>
+                            <GiChickenOven className="text-lg text-white" />
+                            Persian Menu
+                        </Link></li>
+
+                        <li><Link to='indian'>
+                            <GiHotMeal className="text-lg text-white" />
+                            Indian Menu</Link></li>
+
+                        <li><Link to='lamb'>
+                            <GiChickenLeg className="text-lg text-white" />
+                            Rosted Lamb</Link></li>
+
+                        <li><Link to='lunch'>
+                            <MdLunchDining className="text-lg text-white" />
+                            Lunch Menu</Link></li>
+
+                        <li><Link to='takeAway'>
+                            <GiTakeMyMoney className="text-lg text-white" />
+                            Take Away Menu</Link></li>
+
+                        <li><Link to='contact'>
+                            <MdContactMail className="text-lg text-white" />
+                            Contact Form</Link></li>
+
                     </ul>
                 </div>
             </div>
