@@ -64,8 +64,8 @@ const Lunch = () => {
             <h2 className="text-3xl font-semibold mb-6 text-center text-primary">
                 Lunch Menu Orders
             </h2>
-            <div className="bg-base-100  rounded-2xl p-4">
-                <table className="table  w-full">
+            <div className="bg-base-100  rounded-2xl p-4 max-w-5xl mx-auto overflow-auto max-h-screen">
+                <table className="table  rounded-lg">
                     <thead className="bg-base-200 text-base font-semibold sticky top-0 z-10">
                         <tr >
                             <th>#</th>
