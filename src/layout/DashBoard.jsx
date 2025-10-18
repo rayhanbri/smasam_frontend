@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../Root/Navbar';
-import { Link, Outlet } from 'react-router';
+import { Link, NavLink, Outlet } from 'react-router';
 import { GiChickenLeg, GiChickenOven, GiHotMeal, GiKebabSpit, GiTakeMyMoney } from 'react-icons/gi';
 import { MdContactMail, MdLunchDining } from 'react-icons/md';
 
@@ -43,36 +43,79 @@ const dashBoard = () => {
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu   min-h-full w-80 p-4 sticky top-0 h-screen border-2 bg-[#23422A] text-white shadow-lg rounded-xl">
                         {/* Sidebar content here */}
-                            <li className=' font-light  mt-10'>
-                        <Link to='/dashBoard'>
+                        <li className=' font-light  mt-10'>
+                            <NavLink
+                                to='/dashBoard'
+                                end
+                                className={({ isActive }) =>
+                                    isActive ?
+                                        "border-b-2  border-b-white font-medium"
+                                        :
+                                        "hover:text-gray-300"}>
+
                                 <GiKebabSpit className="text-lg text-white" />
                                 Afghan Menu
-                        </Link>
-                            </li>
-                        <li><Link to='persian'>
+                            </NavLink>
+                        </li>
+                        <li><NavLink to='/dashBoard/persian'
+                            className={({ isActive }) =>
+                                isActive ?
+                                    "border-b-2  border-b-white font-medium"
+                                    :
+                                    "hover:text-gray-300"}>
                             <GiChickenOven className="text-lg text-white" />
                             Persian Menu
-                        </Link></li>
+                        </NavLink></li>
 
-                        <li><Link to='indian'>
+                        <li><NavLink to='/dashBoard/indian'
+                            className={({ isActive }) =>
+                                isActive ?
+                                    "border-b-2  border-b-white font-medium"
+                                    :
+                                    "hover:text-gray-300"}
+                        >
                             <GiHotMeal className="text-lg text-white" />
-                            Indian Menu</Link></li>
+                            Indian Menu</NavLink></li>
 
-                        <li><Link to='lamb'>
+                        <li><NavLink to='/dashBoard/lamb'
+                            className={({ isActive }) =>
+                                isActive ?
+                                    "border-b-2  border-b-white font-medium"
+                                    :
+                                    "hover:text-gray-300"}
+                        >
                             <GiChickenLeg className="text-lg text-white" />
-                            Rosted Lamb</Link></li>
+                            Rosted Lamb</NavLink></li>
 
-                        <li><Link to='lunch'>
+                        <li><NavLink to='/dashBoard/lunch'
+                            className={({ isActive }) =>
+                                isActive ?
+                                    "border-b-2  border-b-white font-medium"
+                                    :
+                                    "hover:text-gray-300"}
+                        >
                             <MdLunchDining className="text-lg text-white" />
-                            Lunch Menu</Link></li>
+                            Lunch Menu</NavLink></li>
 
-                        <li><Link to='takeAway'>
+                        <li><NavLink to='/dashBoard/takeAway'
+                            className={({ isActive }) =>
+                                isActive ?
+                                    "border-b-2  border-b-white font-medium"
+                                    :
+                                    "hover:text-gray-300"}
+                        >
                             <GiTakeMyMoney className="text-lg text-white" />
-                            Take Away Menu</Link></li>
+                            Take Away Menu</NavLink></li>
 
-                        <li><Link to='contact'>
+                        <li><NavLink to='/dashBoard/contact'
+                            className={({ isActive }) =>
+                                isActive ?
+                                    "border-b-2  border-b-white font-medium"
+                                    :
+                                    "hover:text-gray-300"}
+                        >
                             <MdContactMail className="text-lg text-white" />
-                            Contact Form</Link></li>
+                            Contact Form</NavLink></li>
 
                     </ul>
                 </div>
