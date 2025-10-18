@@ -94,7 +94,8 @@ const Lamb = () => {
                                         :
                                         order.orderStatus === "Confirm"
                                             ? "bg-yellow-100"
-                                            : ""}`}
+                                            : order.orderStatus === "notAvailable" ?
+                                            'bg-gray-300' :''}`}
                                 >
                                     <td>{index + 1}</td>
                                     <td className="font-medium">{order.orderNumber}</td>
@@ -116,11 +117,12 @@ const Lamb = () => {
                                             onChange={(e) =>
                                                 handleUpdate(order._id, "orderStatus", e.target.value)
                                             }
-                                            disabled={order.orderStatus === "Confirm"}
+                                            disabled={order.orderStatus === "Confirm"|| order.orderStatus === "notAvailable"}
                                         >
                                             <option disabled>Choose</option>
                                             <option value="Confirm">Confirm</option>
                                             <option value="Pending">Pending</option>
+                                            <option value="notAvailable">Not Available</option>
                                         </select>
                                     </td>
 
@@ -132,7 +134,7 @@ const Lamb = () => {
                                             onChange={(e) =>
                                                 handleUpdate(order._id, "lastUpdate", e.target.value)
                                             }
-                                            disabled={order.lastUpdate === "Delivered"}
+                                            disabled={order.lastUpdate === "Delivered" || order.orderStatus === "notAvailable"}
                                         >
                                             <option value="Not Delivered">Not Delivered</option>
                                             <option value="Delivered">Delivered</option>
